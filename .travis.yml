@@ -30,3 +30,4 @@ after_success:
 - git remote add gh-token "https://${GH_TOKEN}@github.com:mkdocs/mkdocs-bootswatch.git";
 - pip install mkdocs -U;
 - if [[ $TOXENV == "py35" ]]; then mkdocs gh-deploy --clean --remote-name gh-token; fi;
+- git push gh-token gh-pages;
